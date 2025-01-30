@@ -1,0 +1,131 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+} */
+
+/* body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+    background: #e3f2fd;
+} */
+
+.wrapper{
+    width:75vmin;
+    height: 80vmin;
+    display: flex;
+    margin: 1em auto 3em ;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 0.2em;
+}
+
+.game-details{
+    color: rgb(196 181 253);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-around;
+    background-image: url("https://i.imgur.com/8Ota0aT.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 1.5s ease;
+}
+
+.detail-conteiner{
+    padding: 0.5em;
+    background-color: #1f2937de;
+    filter: blur(0.5px);
+    border-radius: 0.1em;
+}
+
+.section-level{
+    width: 50%;
+    font-weight: bold;
+    filter: blur(0.5px);
+    border-radius: 0.1em;
+}
+
+.level{
+    width: 50%;
+    background-color: #1f2937de;
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(147 197 253);
+}
+
+.play-board{
+    width: 100%;
+    height: 100%;
+    background: #1F2937;
+    display: grid;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+
+.play-board .food{
+    background-image: url('img/mouse.svg');
+    background-size: cover;
+}
+
+.play-board .head{
+    background-image: url('img/snake.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.progress-content{
+    position: relative;
+    border: 0.35em solid transparent;
+    border-image-source: linear-gradient(45deg, #ff9292, #f06595, #ec9fff, #a586ff, #879fff, #62b8ff, #59e9ff, #6dffd3, #91ffa4, #ceff85, #ffda6a, #ffaa5b);
+    border-image-slice: 1;
+    animation: borderAnimation 10s linear infinite;
+    border-top: transparent;
+    border-left-width: 0.15em ;
+    border-right-width: 0.15em ;
+
+  }
+  
+  @keyframes borderAnimation{
+    0% {
+      border-image-source: linear-gradient(90deg, #f06595, #ec9fff, #a586ff, #879fff, #62b8ff, #59e9ff, #6dffd3, #91ffa4, #ceff85, #ffda6a, #ffaa5b);
+    }
+    40% {
+      border-image-source: linear-gradient(-45deg,#682c41, #3a283f, #645299, #252c46, #2e5372, #266069, #2d6655, #305336, #46572d, #615329, #83572e);
+    }
+    95% {
+        border-image-source: linear-gradient(45deg, #c4537a, #cb89db, #8b72d8, #788ee4, #4da7f1, #4ccde0, #4debbb, #91ffa4, #b5f357, #e9c65f, #fa8e2a);
+    }
+    100% {
+        border-image-source: linear-gradient(80deg, #f06595, #ec9fff, #a586ff, #879fff, #62b8ff, #59e9ff, #6dffd3, #91ffa4, #ceff85, #ffda6a, #ffaa5b);
+    }
+}
+
+
+
+.progress-level{
+    width: 100%;
+    height: 1.5rem;
+    padding: 0.25em;
+    text-align: start;
+    color: #27144463;
+    font-weight: 600;
+    background: linear-gradient(135deg, #ff9292, #f06595, #ec9fff, #a586ff, #879fff, #62b8ff, #59e9ff, #6dffd3, #91ffa4, #ceff85, #ffda6a, #ffaa5b);
+    background-size: 150% 150%;
+    animation: gradientAnimation 10s ease infinite;
+    transition:  width 1.5s ease;
+    filter: blur(0.5px)
+
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
